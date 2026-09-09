@@ -58,6 +58,7 @@ From this directory:
 ```sh
 lax build . --replay
 node scripts/audit-proof-closure.mjs .
+node --test scripts/audit-proof-closure.test.mjs
 lax serve . --port 8127
 ```
 

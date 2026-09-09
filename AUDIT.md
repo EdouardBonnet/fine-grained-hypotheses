@@ -32,6 +32,13 @@ localhost; these were recorded separately from submission rendering.
 The build reports that lax-67 is an archive draft. Its source is pinned,
 and its definitions introduce no proof obligations.
 
+The closure checker accepts both concept-package and proof-package
+dependencies and resolves them to their common submission record. This
+corrects a rejection of `Lax307052Proofs` in the workspace checker;
+the correction is also included in this submission's copy. Regression
+checks cover a closed dependency, an unproved premise reached through
+a proof package, and a dependency cycle.
+
 The workspace-mandated audit of the three older submissions also ran:
 
 ```text

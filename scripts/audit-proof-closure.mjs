@@ -13,8 +13,9 @@ export function auditClosure(root, readDependency) {
     for (const module of new Set([
       ...build.requiredByConcepts, ...build.requiredByProofs,
     ])) {
-      if (!/^Lax[0-9]+$/.test(module)) throw new Error(`Invalid dependency: ${module}`);
-      const id = `lax-${module.slice(3)}`;
+      const packageId = /^Lax([0-9]+)(?:Proofs)?$/.exec(module);
+      if (!packageId) throw new Error(`Invalid dependency: ${module}`);
+      const id = `lax-${packageId[1]}`;
       if (submissions.has(id)) continue;
       const dependency = readDependency(id);
       if (dependency.id !== id) throw new Error(`Wrong dependency file for ${id}`);
