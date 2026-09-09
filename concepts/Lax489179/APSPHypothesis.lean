@@ -12,8 +12,8 @@ edge weights of absolute value at most $n^c$ and no negative cycles.
 Words have $O(\log n)$ bits. The exponent $c$ is chosen before
 $\varepsilon$; it is one fixed polynomial weight range.
 
-`WeightedAPSPHypothesis` is the deterministic version.
-`RandomizedWeightedAPSPHypothesis` also excludes randomized algorithms
+`Deterministic` is the deterministic version.
+`Randomized` also excludes randomized algorithms
 with two-sided error at most $1/3$ and a worst-case running-time bound.
 Success means that the entire distance matrix is correct. No
 equivalence with an expected-time or zero-error variant is asserted.
@@ -28,8 +28,8 @@ def HypothesisAt (mode : Algorithms.Mode) (c : ℕ) : Prop :=
 def Hypothesis (mode : Algorithms.Mode) : Prop :=
   ∃ c : ℕ, 0 < c ∧ HypothesisAt mode c
 
-def WeightedAPSPHypothesis : Prop := Hypothesis .deterministic
+def Deterministic : Prop := Hypothesis .deterministic
 
-def RandomizedWeightedAPSPHypothesis : Prop := Hypothesis .randomized
+def Randomized : Prop := Hypothesis .randomized
 
 end Lax489179.APSPHypothesis

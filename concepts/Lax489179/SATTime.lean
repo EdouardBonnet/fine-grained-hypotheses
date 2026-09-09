@@ -28,7 +28,7 @@ def Solvable (mode : Mode) (k : ℕ) (a : ℝ) : Prop :=
   ∃ (M : Machine) (C : ℝ) (d : ℕ), 0 < C ∧ Allowed mode (Deterministic M) ∧
     ∀ F : Formula, WidthAtMost k F →
       ∃ t : ℕ, (t : ℝ) ≤ C * ((encode F).length + 1 : ℝ) ^ d *
-        Real.rpow 2 (a * F.variables) ∧
+        Real.rpow 2 (a * F.numVars) ∧
         DecidesWithin M (encode F) (Satisfiable F) t
 
 end Lax489179.SATTime

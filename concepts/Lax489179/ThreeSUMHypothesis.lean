@@ -9,8 +9,8 @@ The integer 3-SUM Hypothesis excludes an $O(n^{2-\varepsilon})$
 word-RAM algorithm for every constant $\varepsilon>0$, on arrays of
 $n$ distinct integers in $[-n^3,n^3]$. Words have $O(\log n)$ bits.
 
-`ThreeSUMHypothesis` uses deterministic algorithms;
-`RandomizedThreeSUMHypothesis` also excludes randomized algorithms with
+`Deterministic` uses deterministic algorithms;
+`Randomized` also excludes randomized algorithms with
 two-sided error at most $1/3$ and a worst-case time bound. The latter
 is the randomized convention supplied by this submission. We do not
 identify it here with an expected-time or a zero-error formulation.
@@ -24,8 +24,8 @@ namespace Lax489179.ThreeSUMHypothesis
 def Hypothesis (mode : Algorithms.Mode) : Prop :=
   ∀ ε : ℝ, 0 < ε → ¬ WordTime.Solvable mode ThreeSUM.problem (2 - ε)
 
-def ThreeSUMHypothesis : Prop := Hypothesis .deterministic
+def Deterministic : Prop := Hypothesis .deterministic
 
-def RandomizedThreeSUMHypothesis : Prop := Hypothesis .randomized
+def Randomized : Prop := Hypothesis .randomized
 
 end Lax489179.ThreeSUMHypothesis

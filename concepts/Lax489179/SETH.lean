@@ -12,7 +12,7 @@ $\varepsilon$. This is the exponential-rate formulation of SETH;
 it expresses the absence of a fixed improvement below base two across
 all fixed clause widths, even when each width has its own algorithm.
 
-`RandomizedSETH` excludes bounded-error randomized algorithms instead.
+`Randomized` excludes bounded-error randomized algorithms instead.
 The polynomial factor in the full formula length is explicit in
 `SATTime.Solvable`. These are propositions, not axioms.
 -/
@@ -23,8 +23,8 @@ def Hypothesis (mode : Algorithms.Mode) : Prop :=
   ∀ ε : ℝ, 0 < ε → ε < 1 →
     ∃ k : ℕ, 3 ≤ k ∧ ¬ SATTime.Solvable mode k (1 - ε)
 
-def SETH : Prop := Hypothesis .deterministic
+def Deterministic : Prop := Hypothesis .deterministic
 
-def RandomizedSETH : Prop := Hypothesis .randomized
+def Randomized : Prop := Hypothesis .randomized
 
 end Lax489179.SETH

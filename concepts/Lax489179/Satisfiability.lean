@@ -26,11 +26,11 @@ abbrev Literal (n : ℕ) := Fin n × Bool
 abbrev Clause (n : ℕ) := List (Literal n)
 
 structure Formula where
-  variables : ℕ
-  clauses : List (Clause variables)
+  numVars : ℕ
+  clauses : List (Clause numVars)
 
 def Satisfiable (F : Formula) : Prop :=
-  ∃ assignment : Fin F.variables → Bool,
+  ∃ assignment : Fin F.numVars → Bool,
     ∀ clause ∈ F.clauses, ∃ literal ∈ clause, assignment literal.1 = literal.2
 
 def WidthAtMost (k : ℕ) (F : Formula) : Prop :=
@@ -45,6 +45,6 @@ def encodeClause {n : ℕ} (clause : Clause n) : List Bool :=
   encodeNat clause.length ++ clause.flatMap encodeLiteral
 
 def encode (F : Formula) : List Bool :=
-  encodeNat F.variables ++ encodeNat F.clauses.length ++ F.clauses.flatMap encodeClause
+  encodeNat F.numVars ++ encodeNat F.clauses.length ++ F.clauses.flatMap encodeClause
 
 end Lax489179.Satisfiability
