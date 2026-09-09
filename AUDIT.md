@@ -51,4 +51,4 @@ Its remaining blockers are `Lax733996.CountMachine.implement`,
 `Lax429075.CircuitMachine.compile` and
 `Lax429075.VerifierTime.polynomial`. None is a dependency of this
 submission. These existing failures remain outside the scope of the
-four-hypothesis formalization. This submission is prepared locally.
+four-hypothesis formalization.
