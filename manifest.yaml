@@ -1,0 +1,51 @@
+specVersion: "1"
+id: lax-489179
+leanVersion: "v4.30.0"
+mathlibVersion: "c5ea00351c28e24afc9f0f84379aa41082b1188f"
+title: "ETH, SETH, Weighted APSP, and 3SUM"
+authors:
+  - name: Édouard Bonnet
+  - name: gpt-6-astra
+bibEntries:
+  - |
+    @article{ImpagliazzoPaturi2001,
+      author = {Russell Impagliazzo and Ramamohan Paturi},
+      title = {On the Complexity of k-SAT},
+      journal = {Journal of Computer and System Sciences},
+      volume = {62},
+      number = {2},
+      pages = {367--375},
+      year = {2001},
+      doi = {10.1006/jcss.2000.1727}
+    }
+  - |
+    @inproceedings{VassilevskaWilliams2021,
+      author = {Virginia Vassilevska Williams},
+      title = {3SUM and Related Problems in Fine-Grained Complexity},
+      booktitle = {37th International Symposium on Computational Geometry},
+      series = {Leibniz International Proceedings in Informatics},
+      volume = {189},
+      pages = {2:1--2:2},
+      year = {2021},
+      doi = {10.4230/LIPIcs.SoCG.2021.2}
+    }
+  - |
+    @inproceedings{JinXu2023,
+      author = {Ce Jin and Yinzhan Xu},
+      title = {Removing Additive Structure in 3SUM-Based Reductions},
+      booktitle = {Proceedings of the 55th Annual ACM Symposium on Theory of Computing},
+      pages = {405--418},
+      year = {2023},
+      doi = {10.1145/3564246.3585157},
+      url = {https://arxiv.org/abs/2211.07048}
+    }
+  - |
+    @misc{ChanVassilevskaWilliamsXu2022,
+      author = {Timothy M. Chan and Virginia Vassilevska Williams and Yinzhan Xu},
+      title = {Hardness for Triangle Problems under Even More Believable Hypotheses:
+        Reductions from Real APSP, Real 3SUM, and OV},
+      year = {2022},
+      eprint = {2203.08356},
+      archivePrefix = {arXiv},
+      url = {https://arxiv.org/abs/2203.08356}
+    }
