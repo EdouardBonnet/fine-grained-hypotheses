@@ -1,6 +1,6 @@
 # ETH, SETH, Weighted APSP, and 3SUM
 
-Lax submission `lax-489179`, prepared with Lean 4.30.0 and the archive's
+Lax submission `lax-489179`, prepared with Lean 4.33.0 and the archive's
 pinned mathlib. The four hypotheses are defined as propositions that can
 be used as explicit assumptions in conditional theorems.
 
@@ -20,8 +20,8 @@ variables and `L` is the full encoded formula length. Clause widths,
 algorithms, constants and real exponents have explicit quantifiers.
 
 APSP and 3-SUM use finite word-RAM programs built from the instructions
-of [lax-67](https://laxarchive.org/lax-67/), with an additional fair-bit instruction
-available in randomized mode. Word length is
+of [lax-808846](https://laxarchive.org/lax-808846/), with an additional
+fair-bit instruction available in randomized mode. Word length is
 `b * (Nat.log2 (n + 2) + 1)` for one fixed positive integer `b`.
 The program and `b` are chosen before the input. The full input length
 and every encoded input value must fit in a word. Input access, writes,
@@ -49,7 +49,7 @@ for deterministic programs. No machine implementation axiom is used.
 No implication between different hypotheses is claimed.
 
 The concepts depend only on mathlib and the pinned concept package of
-lax-67, whose proof network has no statement obligations. The proof
+lax-808846, whose proof network has no statement obligations. The proof
 package imports no foreign proofs. The supporting lemmas are the
 submission's proof obligations; the hypothesis definitions have none.
 
