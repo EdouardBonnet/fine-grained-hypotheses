@@ -1,4 +1,4 @@
-import Lax67.Ram
+import Lax808846.Ram
 import Lax489179.Algorithms
 
 /-!
@@ -6,10 +6,10 @@ import Lax489179.Algorithms
 title: Word-RAM programs with optional fair coins
 type: definition
 ---
-We use the finite word-RAM instruction set of lax-67 and add one
+We use the finite word-RAM instruction set of lax-808846 and add one
 instruction writing a fresh fair bit to a specified cell. In deterministic
 mode this instruction is forbidden. All arithmetic, indirect addressing,
-input access and output use lax-67's word semantics. Input is a read-only
+input access and output use lax-808846's word semantics. Input is a read-only
 array, writable memory starts at zero, and output is append-only.
 
 Each fetched instruction costs one step, including a coin or a halt.
@@ -23,7 +23,7 @@ strings supplied to these transitions; it does not provide random advice.
 
 namespace Lax489179.WordPrograms
 
-open Lax67.Ram
+open Lax808846.Ram
 
 inductive Instruction
   | ordinary (instruction : Instr)

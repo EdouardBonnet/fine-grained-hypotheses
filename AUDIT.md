@@ -1,6 +1,7 @@
 # Validation
 
-Checked on 2026-09-09 using the archive's Lean 4.30.0 environment.
+The Lean 4.33.0 port was checked on 2026-09-15 using the archive's
+current environment.
 
 `lax build . --replay` compiles both packages, rechecks the proof terms
 in the kernel and inspects the archive annotations. The submission has
@@ -13,13 +14,14 @@ lax-489179: 23/23 statements closed
 ```
 
 Every recorded proof has an empty set of archive-statement assumptions.
-The only external concept dependency is lax-67 at commit
-`512403f000f23689a1c40d8826062d20f1e28f03`; it has no statement obligations.
+The only external concept dependency is lax-808846 at commit
+`9394e531cc51cb67a0214bca3f9264dfe97ba5c7`; it has no statement obligations.
 The four hypotheses and their randomized variants are proposition
 definitions. They are never installed as axioms, and the supporting
 proofs establish no unrequested complexity lower bound.
 
-The proof network was inspected in the local Lax preview. All 23
+During the original 2026-09-09 validation, the proof network was inspected
+in the local Lax preview. All 23
 statement indicators are proved and all 23 proofs are grounded. The
 renderer groups the statements into five concept nodes; the network
 contains 28 nodes and 23 conclusion edges. All 42 submission, concept
@@ -29,7 +31,7 @@ tooltips, horizontal scrolling, expansion and closing with Escape worked.
 The archive's external comments service produces CSP/CORS warnings on
 localhost; these were recorded separately from submission rendering.
 
-The build reports that lax-67 is an archive draft. Its source is pinned,
+Lax-808846 is registered in the archive. Its immutable source is pinned,
 and its definitions introduce no proof obligations.
 
 The closure checker accepts both concept-package and proof-package

@@ -10,7 +10,7 @@ The input is an array of $n$ distinct integers in $[-n^3,n^3]$.
 It is a yes-instance if three distinct entries sum to zero. The
 order of the array is arbitrary. The machine must output exactly
 one word: one for yes and zero for no. The raw input is the list of
-signed integer codes; lax-67 supplies its length through the input interface.
+signed integer codes; lax-808846 supplies its length through the input interface.
 
 The cubic universe is the standard integer 3-SUM convention. Arithmetic
 in the specification is over $\mathbb Z$, so the sum test is exact and
